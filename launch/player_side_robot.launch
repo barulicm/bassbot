@@ -1,0 +1,10 @@
+<launch>
+
+    <include file="$(find bassbot)/launch/response_player.launch" />
+
+    <node pkg="bassbot" type="RobotInterface" name="robot_interface" output="screen">
+        <param name="dev" value="/dev/ttyACM0" />
+        <param name="baud" value="115200" />
+    </node>
+
+</launch>

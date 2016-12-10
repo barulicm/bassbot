@@ -1,0 +1,9 @@
+<launch>
+
+    <include file="$(find bassbot)/launch/response_player.launch" />
+
+    <node pkg="bassbot" type="SynthInterface" name="synth_interface" output="screen" />
+
+    <node pkg="sound_play" type="soundplay_node.py" name="sound_play" output="screen" />
+
+</launch>

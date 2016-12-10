@@ -1,0 +1,10 @@
+<launch>
+
+    <node pkg="bassbot" type="ResponsePlayer" name="response_player" output="screen">
+        <param name="call_pattern_path" value="$(find bassbot)/launch/call_pattern.csv" />
+        <param name="call_pattern_downbeat_index" value="0" />
+        <param name="response_pattern_path" value="$(find bassbot)/launch/response_pattern.csv" />
+        <param name="mode" value="slow" />
+    </node>
+
+</launch>

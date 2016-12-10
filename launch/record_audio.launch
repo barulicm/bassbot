@@ -1,0 +1,12 @@
+<launch>
+
+    <!--
+        Use this launch file to record audio input to an mp3 file
+    -->
+
+    <node pkg="audio_capture" type="audio_capture" name="audio_capture">
+        <param name="bitrate" value="128" />
+        <param name="dst" value="$(find bassbot)/recording.mp3" />
+    </node>
+
+</launch>

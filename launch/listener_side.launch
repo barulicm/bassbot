@@ -1,0 +1,7 @@
+<launch>
+
+    <node pkg="bassbot" type="MIDIListener" name="midi_listener" output="screen" />
+
+    <include file="$(find bassbot)/launch/call_finder.launch" />
+
+</launch>

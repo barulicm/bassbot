@@ -1,0 +1,1 @@
+This code is part of Gary P. Scavone's RtMidi library hosted at http://www.music.mcgill.ca/~gary/rtmidi/

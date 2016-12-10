@@ -1,0 +1,8 @@
+<launch>
+
+    <node pkg="bassbot" type="CallFinder" name="call_finder" output="screen">
+        <param name="patternPath" value="$(find bassbot)/launch/call_pattern.csv" />
+        <param name="downbeatIndex" value="0" />
+    </node>
+
+</launch>
