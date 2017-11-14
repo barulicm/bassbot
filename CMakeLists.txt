@@ -46,18 +46,24 @@ set_target_properties(RtMidi PROPERTIES COMPILE_FLAGS "-D__LINUX_ALSA__")
 
 add_executable(MIDIListener src/MIDIListener.cpp)
 target_link_libraries(MIDIListener ${catkin_LIBRARIES} RtMidi)
+add_dependencies(MIDIListener bassbot_generate_messages_cpp)
 
 add_executable(CallFinder src/CallFinder.cpp src/PatternUtilities.cpp)
 target_link_libraries(CallFinder ${catkin_LIBRARIES})
+add_dependencies(CallFinder bassbot_generate_messages_cpp)
 
 add_executable(ResponsePlayer src/ResponsePlayer.cpp src/PatternUtilities.cpp)
 target_link_libraries(ResponsePlayer ${catkin_LIBRARIES})
+add_dependencies(ResponsePlayer bassbot_generate_messages_cpp)
 
 add_executable(RobotInterface src/RobotInterface.cpp src/SerialPort.cpp)
 target_link_libraries(RobotInterface ${catkin_LIBRARIES} ${Boost_LIBRARIES})
+add_dependencies(RobotInterface bassbot_generate_messages_cpp)
 
 add_executable(SynthInterface src/SynthInterface.cpp)
 target_link_libraries(SynthInterface ${catkin_LIBRARIES})
+add_dependencies(SynthInterface bassbot_generate_messages_cpp)
 
 add_executable(ArduinoCommDelayTimer src/ArduinoCommDelayTimer.cpp src/SerialPort.cpp)
 target_link_libraries(ArduinoCommDelayTimer ${Boost_LIBRARIES})
+add_dependencies(ArduinoCommDelayTimer bassbot_generate_messages_cpp)
